@@ -7,14 +7,12 @@
 </head>
 <body>
     <form action="create.php" method="post">
-<label for="">nombre</label>
-<input type="text" name="nombreproducto">
-<label for="">descripcion</label>
-<input type="text"name="descripcion">
-<label for="">precio</label>
-<input type="number" name="precio">
-<label for="">stock</label>
-<input type="number" name="stock">
+<label for="">verdura</label>
+<input type="text" name="Verdura">
+<label for="">tiempo</label>
+<input type="number"name="Tiempo">
+<label for="">metodo</label>
+<input type="text" name="metodo">
 <input type="submit" value="enviar" id="">
     </form>
 </body>

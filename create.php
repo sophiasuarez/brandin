@@ -3,23 +3,21 @@
 $servidor ="localhost";
 $usuario ="root";
 $contra ="";
-$baseDeDatos ="proyecto";
+$baseDeDatos ="Hidroponico";
 
-$conn = new mysqli($servidor, $usuario, $contra, $baseDeDatos);
+$conn = new mysqli($Verdura, $Tiempo, $Metodo);
 
 if ($conn->connect_error) {
     die("Conexion fallida: " . $conn->connect_error);
 }
 
-$nombreproducto = $_POST['nombreproducto'];
-$descripcion = $_POST['descripcion'];
-$precio = $_POST['precio'];
-$stock = $_POST['stock'];
-$sql = "INSERT INTO productos (nombreproducto,descripcion,precio,stock) VALUES ('$nombreproducto', '$descripcion', '$precio', '$stock')";
+$Verdura = $_POST['verdura'];
+$Tiempo = $_POST['tiempo'];
+$Metodo = $_POST['metodo'];
+$sql = "INSERT INTO Hidroponico.primero (Verdura,Tiempo,Metodo,) VALUES ('$Verdura', '$Tiempo', '$Metodo')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Nuevo producto creado exitosamente";
-    header("Location: readproductos.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
